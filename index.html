@@ -708,26 +708,103 @@
     
 </section>
         
-        <!-- Results Section -->
-        <section id="results">
-            <h2>4. Results</h2>
-            <p>
-                The final solution to our gait-based authentication challenge is a fully functional wearable system integrated 
-                into a standard athletic shoe. Controlled by a bare-metal ATmega328PB microcontroller, GAIA features real-time 
-                sensor fusion combining a 6-axis IMU (LSM6DSO) and pressure/flex sensors. The device achieves accurate motion 
-                capture at 104 Hz, wireless BLE data transmission at 3-4 Hz, and successful step detection with over 90% accuracy. 
-                The system demonstrates preliminary gait authentication capabilities with 85% accuracy on collected datasets.
-            </p>
+       <!-- Results Section -->
+<section id="results">
+    <h2>4. Results</h2>
+    <p>
+        The final solution to our gait-based authentication challenge is a fully functional wearable system integrated 
+        into a standard athletic shoe. Controlled by a bare-metal ATmega328PB microcontroller, GAIA features real-time 
+        sensor fusion combining a 6-axis IMU (LSM6DSO) and pressure/flex sensors. The device achieves accurate motion 
+        capture at 104 Hz, wireless BLE data transmission at 3-4 Hz, and successful step detection with over 90% accuracy. 
+        The system demonstrates preliminary gait authentication capabilities with 85% accuracy on collected datasets.
+    </p>
 
-            <h3>System Block Diagram</h3>
-            <div class="diagram-container">
-                <div class="diagram-placeholder">
-                    System Block Diagram Image<br>
-                    <span style="font-size: 0.75em; opacity: 0.7;">(Replace with actual block diagram from your report)</span>
+    <h3>System Block Diagram</h3>
+    <div class="diagram-container" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 40px; border-radius: 15px; margin: 40px 0;">
+        <div style="max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+            
+            <!-- Battery -->
+            <div style="background: linear-gradient(135deg, #0f2027, #2c5364); color: white; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                <div style="font-size: 1.3em; font-weight: 700;">Li-Ion Battery (3.7V)</div>
+                <div style="font-size: 0.9em; opacity: 0.9; margin-top: 5px;">500-800mAh</div>
+            </div>
+            
+            <!-- Arrow Down -->
+            <div style="text-align: center; font-size: 2em; color: #00d4ff; margin: -10px 0;">↓</div>
+            
+            <!-- Voltage Regulator -->
+            <div style="background: linear-gradient(135deg, #0f2027, #2c5364); color: white; padding: 20px; border-radius: 10px; text-align: center; margin: 20px auto 30px; max-width: 400px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                <div style="font-size: 1.2em; font-weight: 700;">3.3V Regulator</div>
+                <div style="font-size: 0.95em; opacity: 0.9; margin-top: 5px;">(AMS1117-3.3)</div>
+            </div>
+            
+            <!-- Arrow Down -->
+            <div style="text-align: center; font-size: 2em; color: #00d4ff; margin: -10px 0;">↓</div>
+            
+            <!-- MCU -->
+            <div style="background: linear-gradient(135deg, #00d4ff, #00c4e0); color: white; padding: 25px; border-radius: 12px; text-align: center; margin: 20px auto 40px; box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);">
+                <div style="font-size: 1.4em; font-weight: 700; margin-bottom: 10px;">ATmega328PB Pro Mini (MCU)</div>
+                <div style="font-size: 0.95em; line-height: 1.6;">
+                    <div>– Bare-metal C firmware</div>
+                    <div>– I²C (bit-bang)</div>
+                    <div>– SPI (bit-bang)</div>
                 </div>
             </div>
-        </section>
-
+            
+            <!-- Three Components Row -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px 0;">
+                
+                <!-- LSM6DSO IMU -->
+                <div style="background: linear-gradient(135deg, #203a43, #2c5364); color: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                    <div style="font-size: 1.1em; font-weight: 700; margin-bottom: 10px;">LSM6DSO IMU</div>
+                    <div style="font-size: 0.85em; line-height: 1.5; opacity: 0.95;">
+                        <div>3-axis accel</div>
+                        <div>3-axis gyro</div>
+                    </div>
+                </div>
+                
+                <!-- Flex/FSR Sensor -->
+                <div style="background: linear-gradient(135deg, #203a43, #2c5364); color: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                    <div style="font-size: 1.1em; font-weight: 700; margin-bottom: 10px;">Flex / FSR Sensor</div>
+                    <div style="font-size: 0.85em; line-height: 1.5; opacity: 0.95;">
+                        <div>Analog pressure</div>
+                        <div>/bend sensing</div>
+                    </div>
+                </div>
+                
+                <!-- Bluefruit BLE -->
+                <div style="background: linear-gradient(135deg, #203a43, #2c5364); color: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                    <div style="font-size: 1.1em; font-weight: 700; margin-bottom: 10px;">Bluefruit BLE Module</div>
+                    <div style="font-size: 0.85em; line-height: 1.5; opacity: 0.95;">
+                        <div>SPI + SDEP</div>
+                        <div>UART mode</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Communication Protocols -->
+            <div style="display: flex; justify-content: space-around; margin: 20px 0; padding: 15px; background: #f0f8ff; border-radius: 8px; font-size: 0.85em; color: #2c5364; font-weight: 600;">
+                <div>I²C (SDA,SCL)</div>
+                <div>ADC (A0/A1)</div>
+                <div>SPI (MOSI,MISO,SCK,C)</div>
+            </div>
+            
+            <!-- Arrow Down -->
+            <div style="text-align: center; font-size: 2em; color: #00d4ff; margin: 10px 0;">↓</div>
+            
+            <!-- Smartphone/Backend -->
+            <div style="background: linear-gradient(135deg, #0f2027, #203a43); color: white; padding: 25px; border-radius: 12px; text-align: center; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                <div style="font-size: 1.3em; font-weight: 700; margin-bottom: 10px;">Smartphone / Backend</div>
+                <div style="font-size: 0.95em; line-height: 1.6;">
+                    <div>– BLE UART receiver (Python)</div>
+                    <div>– Live graph visualization</div>
+                    <div>– ML gait analysis pipeline</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
         <!-- SRS Validation -->
         <section id="srs">
             <h2>5. Software Requirements Specification (SRS) Results</h2>
