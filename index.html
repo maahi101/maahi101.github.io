@@ -20,16 +20,16 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
         }
 
         /* Header with animated background */
         header {
             background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
             color: white;
-            padding: 80px 0;
+            padding: 80px 0 100px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -59,6 +59,10 @@
         header .content {
             position: relative;
             z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         /* GAIA logo styling */
@@ -69,10 +73,10 @@
 
         header h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 5em;
+            font-size: 6em;
             font-weight: 900;
-            margin-bottom: 15px;
-            letter-spacing: 8px;
+            margin-bottom: 20px;
+            letter-spacing: 12px;
             text-transform: uppercase;
             background: linear-gradient(45deg, #00d4ff, #00fff7, #00d4ff);
             background-size: 200% 200%;
@@ -89,10 +93,10 @@
         }
 
         header .subtitle {
-            font-size: 1.4em;
+            font-size: 1.5em;
             font-weight: 300;
             opacity: 0.95;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             color: #e0e0e0;
             letter-spacing: 1px;
         }
@@ -101,7 +105,7 @@
             display: inline-block;
             background: rgba(0, 212, 255, 0.2);
             border: 2px solid #00d4ff;
-            padding: 8px 25px;
+            padding: 10px 30px;
             border-radius: 30px;
             font-size: 1.1em;
             font-weight: 600;
@@ -114,18 +118,21 @@
         .team-info {
             background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(10px);
-            padding: 30px;
+            padding: 30px 40px;
             border-radius: 15px;
-            display: inline-block;
+            display: block;
             margin-top: 20px;
             border: 1px solid rgba(0, 212, 255, 0.3);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            width: 100%;
         }
 
         .team-info p {
-            margin: 8px 0;
-            font-size: 1.05em;
+            margin: 10px 0;
+            font-size: 1.1em;
             color: #e0e0e0;
+            text-align: center;
         }
 
         .team-info strong {
@@ -1084,12 +1091,8 @@
             <p style="font-size: 1.05em; margin-top: 10px;">ESE 5190 Embedded Systems Final Project</p>
             <p style="margin-top: 15px;">
                 <a href="https://github.com/yourusername/repository-name" target="_blank">📂 GitHub Repository</a> | 
-                <a href="mailto:rajath@seas.upenn.edu">✉️ Contact Team</a>
+                <a href="/cdn-cgi/l/email-protection#81f3e0ebe0f5e9c1f2e4e0f2aff4f1e4efefafe4e5f4">✉️ Contact Team</a>
             </p>
             <p style="margin-top: 20px; font-size: 0.95em; opacity: 0.9;">
                 University of Pennsylvania - School of Engineering and Applied Science
             </p>
-        </div>
-    </footer>
-</body>
-</html>
